@@ -64,3 +64,22 @@ function getComputerChoice() {
       return "paper";
   }
 }
+
+function playGame() {
+  let i = 0;
+  while (i < 5) {
+    playRound(getHumanChoice(), getComputerChoice());
+    i++;
+    console.log("Human score:", humanScore);
+    console.log("Computer score:", computerScore);
+  }
+  if (humanScore > computerScore) {
+    console.log('Human wins!');
+  } else if (humanScore < computerScore){
+    console.log('Computer wins!');
+  } else {
+    console.log("It's a tie.");
+  }
+}
+
+playGame();
